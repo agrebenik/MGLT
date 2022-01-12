@@ -23,6 +23,16 @@ namespace MGLT
 
         public static Dictionary<string, Texture2D> Textures = new Dictionary<string, Texture2D>();
 
+        public static Texture2D BlankTexture; 
+
+        public static void Initialize(GraphicsDevice device)
+        {
+            BlankTexture = new Texture2D(device, 1, 1);
+            Color[] data = new Color[1];
+            data[0] = Color.White;
+            BlankTexture.SetData(data);
+        }
+
         public static long MS()
         {
             return DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;

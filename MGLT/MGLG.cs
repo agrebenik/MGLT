@@ -17,11 +17,10 @@ namespace MGLT
             GameGraphics = new GraphicsDeviceManager(this);
             GameGraphics.PreferredBackBufferWidth = w;
             GameGraphics.PreferredBackBufferHeight = h;
-            GameGraphics.IsFullScreen = true;
-            IsMouseVisible = true;
 
             Content.RootDirectory = "Content";
             MGLM.Game = this;
+            MGLM.Initialize(GameGraphics.GraphicsDevice);
         }
 
         protected override void Initialize()
